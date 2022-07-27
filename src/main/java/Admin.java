@@ -10,7 +10,7 @@ import java.util.concurrent.ExecutionException;
 public class Admin {
     public static void main(String[] args) throws ExecutionException, InterruptedException {
         Properties properties = new Properties();
-        properties.put(AdminClientConfig.BOOTSTRAP_SERVERS_CONFIG,"10.3.114.1:9092");
+        properties.put(AdminClientConfig.BOOTSTRAP_SERVERS_CONFIG,"ip:9092");
         AdminClient adminClient = AdminClient.create(properties);
         ListTopicsResult topics =adminClient.listTopics();
         //topics.names().get().forEach(System.out::println);
